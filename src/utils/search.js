@@ -1,9 +1,14 @@
-const stores = require('stores')
+const storeUrls = require('./stores')
 
 const searchStore = async (item, store) => {
-    // const searchLink = stores[store] + item
-    const searchLink = `https://priceable.co.uk/search?q=${item}&retailer=${store}`
+    const searchUrl = storeUrls[store] + item
 
+    const res = await fetch(searchUrl)
+    const htmlString = res.text()
+    const $ = cheerio.load(htmlString)
     
 }
+
+searchStore('chocolate', 'Tesco')
+    .then(res => console.log(res))
 
