@@ -1,3 +1,4 @@
+const cheerio = require('cheerio');
 const storeUrls = require('./stores')
 
 const searchStore = async (item, store) => {
@@ -7,7 +8,6 @@ const searchStore = async (item, store) => {
     const htmlString = res.text()
     const $ = cheerio.load(htmlString)
     
-}
 
 searchStore('chocolate', 'Tesco')
     .then(res => console.log(res))
