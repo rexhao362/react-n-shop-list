@@ -1,6 +1,18 @@
-const storeUrls = {
-    'LIDL': 'https://www.lidl.com/search/products/',
-    'Tesco': 'https://www.tesco.com/groceries/en-GB/search?query=',
+const storeDetails = {
+    LIDL: {
+        url: 'https://www.lidl.com/search/products/',
+        name: '',
+        picture: '',
+        price: '',
+        category: '',
+    },
+    Tesco: {
+        url: 'https://www.tesco.com/groceries/en-GB/search?query=',
+        name: '',
+        picture: '',
+        price: '',
+        category: '',
+    },
 }
 
-module.exports = storeUrls
+module.exports = storeDetails
